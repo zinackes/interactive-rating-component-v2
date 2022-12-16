@@ -15,6 +15,10 @@ body{
     --p-x: var(--p-dark);
     --bg-round-hover-x: var(--bg-round-hover-dark);
     --bg-submit-x: var(--bg-submit-dark);
+    --bg-submit-hover-x: var(--bg-submit-hover-dark);
+    --bg-submit-txt-x: var(--bg-submit-txt-dark);
+    --bg-submit-txt-hover-x: var(--bg-submit-txt-hover-dark);
+    --bg-light-mode-x: var(--bg-light-mode);
 
     --bg-card-dark: linear-gradient(180deg, hsl(218, 9%, 23%) 0%, hsl(216, 12%, 8%) 100%);
     --bg-round-dark: hsl(213, 19%, 18%);
@@ -22,11 +26,15 @@ body{
     --p-dark: hsl(217, 12%, 63%);
     --bg-round-hover-dark: hsl(25, 97%, 53%);
     --bg-submit-dark: hsl(25, 97%, 53%);
+    --bg-submit-hover-dark: hsl(0, 0%, 100%);
+    --bg-submit-txt-hover-dark: hsl(25, 97%, 53%);
+    --bg-submit-txt-dark: hsl(0, 0%, 100%);
+    --bg-light-mode: hsl(217, 12%, 63%);
 }
 
 main{
     background: var(--bg-card-x);
-    max-width: 350px;
+    width: 350px;
     padding: 30px;
     border-radius: 20px;
     letter-spacing: .5px;
@@ -75,9 +83,46 @@ p{
 }
 
 .submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--bg-submit-x);
     border-radius: 30px;
     font-size: 15px;
     padding: 10px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    font-weight: 600;
+    color: var(--bg-submit-txt-x);
+    letter-spacing: 1.5px;
 }
 
+.submit:hover{
+    background-color: var(--bg-submit-hover-x);
+    color: var(--bg-submit-txt-hover-x);
+}
+
+.mode{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 120px;
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-light-mode-x);
+}
+
+.mode:hover{
+    background-color: white;
+    color: black;
+}
+
+.fa-solid{
+    margin-right: 5px;
+    margin-bottom: 2px;
+}

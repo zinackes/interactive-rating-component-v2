@@ -18,7 +18,10 @@ body{
     --bg-submit-hover-x: var(--bg-submit-hover-dark);
     --bg-submit-txt-x: var(--bg-submit-txt-dark);
     --bg-submit-txt-hover-x: var(--bg-submit-txt-hover-dark);
-    --bg-light-mode-x: var(--bg-light-mode);
+    --bg-txt-light-mode-x: var(--bg-txt-light-mode);
+    --bg-light-mode-hover-x: var(--bg-light-mode-hover);
+    --bg-txt-light-mode-hover-x: var(--bg-txt-light-mode-hover);
+    --shadow-x: var(--shadow-dark);
 
     --bg-card-dark: linear-gradient(180deg, hsl(218, 9%, 23%) 0%, hsl(216, 12%, 8%) 100%);
     --bg-round-dark: hsl(213, 19%, 18%);
@@ -29,7 +32,40 @@ body{
     --bg-submit-hover-dark: hsl(0, 0%, 100%);
     --bg-submit-txt-hover-dark: hsl(25, 97%, 53%);
     --bg-submit-txt-dark: hsl(0, 0%, 100%);
-    --bg-light-mode: hsl(217, 12%, 63%);
+    --bg-txt-light-mode: hsl(217, 12%, 63%);
+    --white: white;
+    --black: black;
+    --shadow-dark: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    --shadow-white: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+
+    --bg-card-light: linear-gradient(180deg, rgba(237,230,238,1) 0%, rgba(203,230,255,1) 100%);
+    --bg-round-light: #ccc8c8;
+    --h2-light: #252d37;
+    --p-light: #2e3237;
+    --bg-round-hover-light: rgb(72, 79, 219);
+    --bg-submit-light: rgb(72, 79, 219);
+    --bg-submit-hover-light: hsl(216, 12%, 8%);
+    --bg-submit-txt-hover-light: rgb(72, 79, 219);
+    --bg-submit-txt-light: #111519;
+    --bg-txt-dark-mode: hsl(216, 12%, 8%);
+    --bg-dark-mode-hover: hsl(216, 12%, 8%);
+    --bg-txt-dark-mode-hover: white;
+}
+
+.light-mode{
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(173,212,249,1) 100%);
+    --bg-card-x: var(--bg-card-light);
+    --bg-round-x: var(--bg-round-light);
+    --h2-x: var(--h2-light);
+    --p-x: var(--p-light);
+    --bg-round-hover-x: var(--bg-round-hover-light);
+    --bg-submit-x: var(--bg-submit-light);
+    --bg-submit-hover-x: var(--bg-submit-hover-light);
+    --bg-submit-txt-x: var(--bg-submit-txt-light);
+    --bg-submit-txt-hover-x: var(--bg-submit-txt-hover-light);
+    --bg-txt-light-mode-x: var(--bg-txt-dark-mode);
+    --bg-light-mode-hover-x: var(--bg-dark-mode-hover);
+    --bg-txt-light-mode-hover-x: var(--bg-txt-dark-mode-hover);
 }
 
 main{
@@ -38,6 +74,7 @@ main{
     padding: 30px;
     border-radius: 20px;
     letter-spacing: .5px;
+    box-shadow: var(--shadow-x);
 }
 
 .bg-round{
@@ -48,17 +85,19 @@ main{
     justify-content: center;
     border-radius: 50%;
     height: 47px;
-    transition: .5s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 h2{
     color: var(--h2-x);
     margin-top: 30px;
+    transition: .3s ease-in-out;
 }
 
 p{
     color: var(--p-x);
     font-size: 15px;
+    transition: .3s ease-in-out;
 }
 
 .notes{
@@ -68,6 +107,7 @@ p{
     gap: 25px;
     margin-top: 25px;
     margin-bottom: 35px;
+    transition: .3s ease-in-out;
 }
 
 .notes > button{
@@ -114,7 +154,7 @@ p{
     display: flex !important;
     align-items: center;
     justify-content: center;
-    color: var(--bg-light-mode-x);
+    color: var(--bg-txt-light-mode-x);
 }
 
 .fa-solid > h4{
@@ -123,10 +163,9 @@ p{
     margin-left: 5px;
     margin-top: 2px;
     margin-bottom: 0;
-
 }
 
 .fa-solid:hover{
-    background-color: white;
-    color: black;
+    background-color: var(--bg-light-mode-hover-x);
+    color: var(--bg-txt-light-mode-hover-x);
 }

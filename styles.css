@@ -9,66 +9,51 @@ body{
 }
 
 :root{
-    --bg-card-x: var(--bg-card-dark);
-    --bg-round-x: var(--bg-round-dark);
-    --h2-x: var(--h2-dark);
-    --p-x: var(--p-dark);
-    --bg-round-hover-x: var(--bg-round-hover-dark);
-    --bg-submit-x: var(--bg-submit-dark);
-    --bg-submit-hover-x: var(--bg-submit-hover-dark);
-    --bg-submit-txt-x: var(--bg-submit-txt-dark);
-    --bg-submit-txt-hover-x: var(--bg-submit-txt-hover-dark);
-    --bg-txt-light-mode-x: var(--bg-txt-light-mode);
-    --bg-light-mode-hover-x: var(--bg-light-mode-hover);
-    --bg-txt-light-mode-hover-x: var(--bg-txt-light-mode-hover);
+    --bg-card-x: var(--gradient-dark);
+    --bg-round-x: var(--medium-black);
+    --h2-x: var(--white);
+    --p-x: var(--grey);
+    --bg-round-hover-x: var(--orange);
+    --bg-submit-x: var(--orange);
+    --bg-submit-hover-x: var(--white);
+    --bg-submit-txt-x: var(--white);
+    --bg-submit-txt-hover-x: var(--slight-black);
+    --bg-txt-light-mode-x: var(--grey);
+    --bg-light-mode-hover-x: var(--grey);
+    --bg-txt-light-mode-hover-x: var(--white);
     --shadow-x: var(--shadow-dark);
 
-    --bg-card-dark: linear-gradient(180deg, hsl(218, 9%, 23%) 0%, hsl(216, 12%, 8%) 100%);
-    --bg-round-dark: hsl(213, 19%, 18%);
-    --h2-dark: hsl(0, 0%, 100%);
-    --p-dark: hsl(217, 12%, 63%);
-    --bg-round-hover-dark: hsl(25, 97%, 53%);
-    --bg-submit-dark: hsl(25, 97%, 53%);
-    --bg-submit-hover-dark: hsl(0, 0%, 100%);
-    --bg-submit-txt-hover-dark: hsl(25, 97%, 53%);
-    --bg-submit-txt-dark: hsl(0, 0%, 100%);
-    --bg-txt-light-mode: hsl(217, 12%, 63%);
+    --gradient-dark: linear-gradient(180deg, hsl(218, 9%, 23%) 0%, hsl(216, 12%, 8%) 100%);
+    --medium-black: #252d37;
+    --grey: hsl(217, 12%, 63%);
+    --orange: hsl(25, 97%, 53%);
     --white: white;
     --black: black;
+    --slight-black: hsl(216, 12%, 8%);
     --shadow-dark: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     --shadow-white: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
-
-    --bg-card-light: linear-gradient(180deg, rgba(237,230,238,1) 0%, rgba(203,230,255,1) 100%);
-    --bg-round-light: #ccc8c8;
-    --h2-light: #252d37;
-    --p-light: #2e3237;
-    --bg-round-hover-light: rgb(72, 79, 219);
-    --bg-submit-light: rgb(72, 79, 219);
-    --bg-submit-hover-light: hsl(216, 12%, 8%);
-    --bg-submit-txt-hover-light: rgb(72, 79, 219);
-    --bg-submit-txt-light: #111519;
-    --bg-txt-dark-mode: hsl(216, 12%, 8%);
-    --bg-dark-mode-hover: hsl(216, 12%, 8%);
-    --bg-txt-dark-mode-hover: white;
+    --gradient-white: linear-gradient(180deg, rgba(237,230,238,1) 0%, rgba(203,230,255,1) 100%);
+    --slight-grey: #ccc8c8;
+    --blue: rgb(72, 79, 219);
 }
 
 .light-mode{
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(173,212,249,1) 100%);
-    --bg-card-x: var(--bg-card-light);
-    --bg-round-x: var(--bg-round-light);
-    --h2-x: var(--h2-light);
-    --p-x: var(--p-light);
-    --bg-round-hover-x: var(--bg-round-hover-light);
-    --bg-submit-x: var(--bg-submit-light);
-    --bg-submit-hover-x: var(--bg-submit-hover-light);
-    --bg-submit-txt-x: var(--bg-submit-txt-light);
-    --bg-submit-txt-hover-x: var(--bg-submit-txt-hover-light);
-    --bg-txt-light-mode-x: var(--bg-txt-dark-mode);
-    --bg-light-mode-hover-x: var(--bg-dark-mode-hover);
-    --bg-txt-light-mode-hover-x: var(--bg-txt-dark-mode-hover);
+    --bg-card-x: var(--gradient-white);
+    --bg-round-x: var(--grey);
+    --h2-x: var(--grey);
+    --p-x: var(--slight-grey);
+    --bg-round-hover-x: var(--blue);
+    --bg-submit-x: var(--blue);
+    --bg-submit-hover-x: var(--slight-black);
+    --bg-submit-txt-x: var(--slight-black);
+    --bg-submit-txt-hover-x: var(--blue);
+    --bg-txt-light-mode-x: var(--slight-black);
+    --bg-light-mode-hover-x: var(--slight-black);
+    --bg-txt-light-mode-hover-x: var(--white);
 }
 
-main{
+main, section{
     background: var(--bg-card-x);
     width: 350px;
     padding: 30px;
@@ -168,4 +153,18 @@ p{
 .fa-solid:hover{
     background-color: var(--bg-light-mode-hover-x);
     color: var(--bg-txt-light-mode-hover-x);
+}
+
+.hidden{
+    display: none;
+}
+
+.error{
+    color: red;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    visibility: hidden;
+    margin-bottom: 0;
+    margin-top: 10px;
 }

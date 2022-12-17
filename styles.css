@@ -3,6 +3,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     min-height: 100vh;
     font-family: 'Overpass', sans-serif;
     background: linear-gradient(180deg, rgba(32,34,61,1) 0%, rgba(21,23,59,1) 100%);
@@ -23,6 +24,8 @@ body{
     --bg-light-mode-hover-x: var(--grey);
     --bg-txt-light-mode-hover-x: var(--white);
     --shadow-x: var(--shadow-dark);
+    --bg-round-long-x: var(--medium-black);
+    --txt-round-long-x: var(--orange);
 
     --gradient-dark: linear-gradient(180deg, hsl(218, 9%, 23%) 0%, hsl(216, 12%, 8%) 100%);
     --medium-black: #252d37;
@@ -42,8 +45,8 @@ body{
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(173,212,249,1) 100%);
     --bg-card-x: var(--gradient-white);
     --bg-round-x: var(--grey);
-    --h2-x: var(--grey);
-    --p-x: var(--slight-grey);
+    --h2-x: var(--black);
+    --p-x: var(--slight-black);
     --bg-round-hover-x: var(--blue);
     --bg-round-selected-x: var(--slight-black);
     --bg-submit-x: var(--blue);
@@ -53,6 +56,8 @@ body{
     --bg-txt-light-mode-x: var(--slight-black);
     --bg-light-mode-hover-x: var(--grey);
     --bg-txt-light-mode-hover-x: var(--white);
+    --bg-round-long-x: var(--grey);
+    --txt-round-long-x: var(--white);
 }
 
 main, section{
@@ -106,6 +111,11 @@ p{
 
 .notes > button:hover{
     background-color: var(--bg-round-hover-x);
+    color: white;
+}
+
+.notes > button:focus{
+    background-color: var(--bg-round-selected-x);
     color: white;
 }
 
@@ -185,12 +195,13 @@ section{
 
 .bg-round-long{
     margin-top: 20px;
-    background-color: var(--medium-black);
+    background-color: var(--bg-round-long-x);
     border-radius: 20px;
-    color: var(--orange);
+    color: var(--txt-round-long-x);
     padding: 7px;
     padding-left: 15px;
     padding-right: 15px;
+    transition: .3s ease-in-out;
 }
 
 .bg-round-long > h5{

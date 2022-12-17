@@ -14,26 +14,30 @@
 
 <body>
 
-  <main class="hidden">
+  <main id="main">
     <div class="bg-round">
       <img src="./images/icon-star.svg">
     </div>
     <h2>How did we do?</h2>
     <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
     <div class="notes">
-      <button class="bg-round">1</button>
-      <button class="bg-round">2</button>
-      <button class="bg-round">3</button>
-      <button class="bg-round">4</button>
-      <button class="bg-round">5</button>
+      <button class="bg-round" id="star">1</button>
+      <button class="bg-round" id="star">2</button>
+      <button class="bg-round" id="star">3</button>
+      <button class="bg-round" id="star">4</button>
+      <button class="bg-round" id="star">5</button>
     </div>
-    <div class="submit" type="button">SUBMIT</div>
-    <h5 class="error">Error! you cannot submit without rating.</h5>
-    <i class="fa-solid fa-sun" id="switch"> <h4 id="test">Light Mode</h4></i>
+    <div class="submit" type="button" id="submit">SUBMIT</div>
+    <h5 class="error hidden">Error! you cannot submit without rating.</h5>
+    <div class="mode" id="switch"><img src="./images/light-mode.png" id="img-mode"> <h4 id="txt-mode">Light Mode</h4></div>
+    
   </main>
 
-  <section>
-    
+  <section id="second" class="hidden">
+    <img src="./images/illustration-thank-you.svg">
+    <div class="bg-round-long"><h5>You selected <span id="note"></span> out of 5</h5></div>
+    <h2>Thank you!</h2>
+    <p>We appreciate you taking the time to give a rating. if you ever need more support, don't hesitate to get in touch!</p>
   </section>
 
 </body>

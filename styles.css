@@ -14,6 +14,7 @@ body{
     --h2-x: var(--white);
     --p-x: var(--grey);
     --bg-round-hover-x: var(--orange);
+    --bg-round-selected-x: var(--grey);
     --bg-submit-x: var(--orange);
     --bg-submit-hover-x: var(--white);
     --bg-submit-txt-x: var(--white);
@@ -44,12 +45,13 @@ body{
     --h2-x: var(--grey);
     --p-x: var(--slight-grey);
     --bg-round-hover-x: var(--blue);
+    --bg-round-selected-x: var(--slight-black);
     --bg-submit-x: var(--blue);
     --bg-submit-hover-x: var(--slight-black);
     --bg-submit-txt-x: var(--slight-black);
     --bg-submit-txt-hover-x: var(--blue);
     --bg-txt-light-mode-x: var(--slight-black);
-    --bg-light-mode-hover-x: var(--slight-black);
+    --bg-light-mode-hover-x: var(--grey);
     --bg-txt-light-mode-hover-x: var(--white);
 }
 
@@ -107,6 +109,7 @@ p{
     color: white;
 }
 
+
 .submit{
     display: flex;
     justify-content: center;
@@ -127,12 +130,12 @@ p{
     color: var(--bg-submit-txt-hover-x);
 }
 
-.fa-solid{
+.mode{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
-    width: 120px;
+    margin-top: 25px;
     cursor: pointer;
+    width: 130px;
     padding: 7px;
     border-radius: 10px;
     transition: .3s ease-in-out;
@@ -142,17 +145,22 @@ p{
     color: var(--bg-txt-light-mode-x);
 }
 
-.fa-solid > h4{
+.mode > h4{
     font-size: 15px;
     font-family: 'Overpass', sans-serif;
     margin-left: 5px;
     margin-top: 2px;
     margin-bottom: 0;
+    transition: .3s ease-in-out;
 }
 
-.fa-solid:hover{
+.mode:hover{
     background-color: var(--bg-light-mode-hover-x);
     color: var(--bg-txt-light-mode-hover-x);
+}
+
+.mode > img{
+    height: 21px;
 }
 
 .hidden{
@@ -161,10 +169,32 @@ p{
 
 .error{
     color: red;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    visibility: hidden;
     margin-bottom: 0;
     margin-top: 10px;
+    text-align: center;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: .3s ease-in-out;
+}
+
+.bg-round-long{
+    margin-top: 20px;
+    background-color: var(--medium-black);
+    border-radius: 20px;
+    color: var(--orange);
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.bg-round-long > h5{
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: .5px;
 }

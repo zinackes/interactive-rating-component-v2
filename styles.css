@@ -204,6 +204,10 @@ section{
     transition: .3s ease-in-out;
 }
 
+
+[ajouter effet hover sur etoile]
+[ajouter note .25 .50 et .75 quand on selectionne la note]
+
 .bg-round-long > h5{
     margin: 0;
     font-weight: 400;

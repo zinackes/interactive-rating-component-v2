@@ -16,6 +16,7 @@ var one = document.getElementById("one");
 var two = document.querySelectorAll("#two");
 var back = document.getElementById("back");
 var note_selected = document.querySelector("#two > #star:first-child");
+var last = document.querySelector("#one > #star:last-child");
 
 
 mode.onclick = function(txt_mode){
@@ -42,20 +43,23 @@ values.forEach((value) => {
             }
         }
 
-        note_selected.focus();
-
-        if (value < 5){
+        values.onclick = function(){
             one.classList.add("hidden");
             back.classList.remove("hidden");
             for (let i =0; i<2; i++){
                 two[i].classList.remove("hidden");
             }
-            console.log("marche")
+            note_selected.focus();
         }
-        else{
-            console.log("marche pas")
-            console.log(value);
+
+        last.onclick = function(){
+            one.classList.remove("hidden");
+            back.classList.add("hidden");
+            for (let i =0; i<2; i++){
+                two[i].classList.add("hidden");
+            }
         }
+
 
 
         submit.onclick = function(){
@@ -77,19 +81,23 @@ values.forEach((value) => {
             txt_mode.target.textContent = "Light Mode";
             value.focus();
             }
+
+
+            back.onclick = function(){
+                one.classList.remove("hidden");
+                back.classList.add("hidden");
+                for (let i =0; i<2; i++){
+                    two[i].classList.add("hidden");
+                }
+                value.focus();
+            }
+            
             
             final.innerHTML = value.innerHTML;
         })
     })
 
 
-back.onclick = function(){
-    one.classList.remove("hidden");
-    back.classList.add("hidden");
-    for (let i =0; i<2; i++){
-        two[i].classList.add("hidden");
-    }
-}
 
 
 
